@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer.DbContext", "DataLayer.DbContext\DataLayer.DbContext.csproj", "{01D0FA1E-5C74-465F-8B0D-7EF9C2FEAD05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer.Entities", "DataLayer.Entities\DataLayer.Entities.csproj", "{692E7724-1377-4A88-9423-D0731C4BE95E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppLayer", "WebAppLayer\WebAppLayer.csproj", "{A47B3029-7B26-4B87-9D7E-C564A9EB3CC6}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01D0FA1E-5C74-465F-8B0D-7EF9C2FEAD05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01D0FA1E-5C74-465F-8B0D-7EF9C2FEAD05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01D0FA1E-5C74-465F-8B0D-7EF9C2FEAD05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01D0FA1E-5C74-465F-8B0D-7EF9C2FEAD05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{692E7724-1377-4A88-9423-D0731C4BE95E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{692E7724-1377-4A88-9423-D0731C4BE95E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{692E7724-1377-4A88-9423-D0731C4BE95E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{692E7724-1377-4A88-9423-D0731C4BE95E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A47B3029-7B26-4B87-9D7E-C564A9EB3CC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A47B3029-7B26-4B87-9D7E-C564A9EB3CC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A47B3029-7B26-4B87-9D7E-C564A9EB3CC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A47B3029-7B26-4B87-9D7E-C564A9EB3CC6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
