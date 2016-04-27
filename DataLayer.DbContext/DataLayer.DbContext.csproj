@@ -52,7 +52,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\BooksContext.cs" />
+    <Compile Include="Migrations\201604271050581_InitialCreate.cs" />
+    <Compile Include="Migrations\201604271050581_InitialCreate.Designer.cs">
+      <DependentUpon>201604271050581_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeedData\BooksContextInitializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -63,6 +69,11 @@
       <Project>{692e7724-1377-4a88-9423-d0731c4be95e}</Project>
       <Name>DataLayer.Entities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201604271050581_InitialCreate.resx">
+      <DependentUpon>201604271050581_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

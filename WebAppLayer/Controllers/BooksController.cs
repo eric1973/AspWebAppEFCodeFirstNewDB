@@ -18,7 +18,7 @@ namespace WebAppLayer.Controllers
         // GET: Books
         public ActionResult Index()
         {
-            return View(db.MyEntities.ToList());
+            return View(db.Books.ToList());
         }
 
         // GET: Books/Details/5
@@ -28,7 +28,7 @@ namespace WebAppLayer.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Book book = db.MyEntities.Find(id);
+            Book book = db.Books.Find(id);
             if (book == null)
             {
                 return HttpNotFound();
@@ -51,7 +51,7 @@ namespace WebAppLayer.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.MyEntities.Add(book);
+                db.Books.Add(book);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -66,7 +66,7 @@ namespace WebAppLayer.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Book book = db.MyEntities.Find(id);
+            Book book = db.Books.Find(id);
             if (book == null)
             {
                 return HttpNotFound();
@@ -97,7 +97,7 @@ namespace WebAppLayer.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Book book = db.MyEntities.Find(id);
+            Book book = db.Books.Find(id);
             if (book == null)
             {
                 return HttpNotFound();
@@ -110,8 +110,8 @@ namespace WebAppLayer.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Book book = db.MyEntities.Find(id);
-            db.MyEntities.Remove(book);
+            Book book = db.Books.Find(id);
+            db.Books.Remove(book);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -1,6 +1,7 @@
 namespace DataLayer.DbContext.Context
 {
     using Entities.Models;
+    using SeedData;
     using System;
     using System.Data.Entity;
     using System.Linq;
@@ -16,11 +17,13 @@ namespace DataLayer.DbContext.Context
         public BooksContext()
             : base("name=BooksContext")
         {
+            // Initialize Database with data
+            Database.SetInitializer(new BooksContextInitializer());
         }
 
         // Add a DbSet for each entity type that you want to include in your model. For more information 
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 
-        public virtual DbSet<Book> MyEntities { get; set; }
+        public virtual DbSet<Book> Books { get; set; }
     }
 }
